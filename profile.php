@@ -6,9 +6,37 @@
     <link href="css/bootstrap.css" rel="stylesheet">
 </head>
     <body class="bg-light">
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            
-        </nav>
-
+       
+       <?php include "include/nav.php"; ?>
+        
+        
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/250" alt="">
+                        <div class="card-body text-center">
+                           <h2 class="h6 text-uppercase">Sadique Hussain</h2>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card">
+                            <form action="">
+                                <textarea name="" id="" cols="30" rows="6" class="form-control" placeholder="Write Something here"></textarea>
+                                
+                            </form>
+                            <div class="card-body">
+                                <input type="file">
+                                <input type="submit" class="btn btn-primary btn-sm float-right">
+                            </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    
+                </div>
+            </div>
+        </div>
     </body>
 </html>
