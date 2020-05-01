@@ -11,7 +11,7 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item"><a href="" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="" class="nav-link">Profile</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Logout</a></li>
+                    <li class="nav-item"><a href="logout.php" class="btn mt-1 btn-danger btn-sm">Logout</a></li>
                 </ul>
             </div>
             

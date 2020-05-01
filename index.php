@@ -108,7 +108,7 @@ if(isset($_POST['login'])){
     $username = $_POST['username'];
     $password = md5($_POST['password']);
     
-    $count = countData('account',"(email='$username' OR contact='$username') AND password='$password'");
+    $count = countData('account'," (email='$username' OR contact='$username') AND password='$password'");
     
     if($count > 0){
         $_SESSION['user'] = $username;

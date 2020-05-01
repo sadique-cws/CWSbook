@@ -37,5 +37,50 @@ function countData($table,$cond){
 }
 
 
+//retrive data
+function callingData($table,$cond=NULL,$single=false){
+    $array = array();
+    global $connect;
+    if($cond==NULL){
+        $query = mysqli_query($connect,"SELECT * FROM $table");
+    }
+    else{
+        $query = mysqli_query($connect,"SELECT * FROM $table $cond");
+    }
+    
+    if($single==false){
+        while($row = mysqli_fetch_array($query)){
+            $array[] = $row;
+        }
+    }
+    elseif($single==true){
+        $array = mysqli_fetch_array($query);
+    }
+    return $array;
+}
+
+//retrive join data
+function callingJoinData($table1,$table2,$cond=NULL,$single=false){
+    $array = array();
+    global $connect;
+    if($cond==NULL){
+        $query = mysqli_query($connect,"SELECT * FROM $table1 JOIN $table2");
+    }
+    else{
+        $query = mysqli_query($connect,"SELECT * FROM $table1 JOIN $table2 $cond");
+    }
+    
+    if($single==false){
+        while($row = mysqli_fetch_array($query)){
+            $array[] = $row;
+        }
+    }
+    elseif($single==true){
+        $array = mysqli_fetch_array($query);
+    }
+    return $array;
+}
+
+
 
 ?>
