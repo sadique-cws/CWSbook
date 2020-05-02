@@ -1,4 +1,10 @@
-<?php include_once("include/config.php");?>
+<?php include_once("include/config.php");
+
+if(isset($_SESSION['user'])){
+    redirect('profile');
+}
+
+?>
 
 
 <!DOCTYPE html>

@@ -64,10 +64,10 @@ function callingJoinData($table1,$table2,$cond=NULL,$single=false){
     $array = array();
     global $connect;
     if($cond==NULL){
-        $query = mysqli_query($connect,"SELECT * FROM $table1 JOIN $table2");
+        $query = mysqli_query($connect,"SELECT * FROM $table1 $table2");
     }
     else{
-        $query = mysqli_query($connect,"SELECT * FROM $table1 JOIN $table2 $cond");
+        $query = mysqli_query($connect,"SELECT * FROM $table1 $table2 $cond");
     }
     
     if($single==false){

@@ -3,7 +3,7 @@ include_once "include/config.php";
 
 $log = $_SESSION['user'];
 
-$data = callingJoinData('account','details'," ON account.user_id=details.account_id where account.email='$log' or account.contact='$log'",true);
+$data = callingJoinData('account LEFT JOIN','details'," ON account.user_id=details.account_id where account.email='$log' or account.contact='$log'",true);
 
 //echo "<pre>";
 //print_r($data);
